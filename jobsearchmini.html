@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search - Vue.js Jobs</title>
+    <link rel="stylesheet" href="serachjob.css">
+</head>
+<body>
+    <!-- Header with navigation links -->
+    <header>
+        <div class="container header-content">
+            <h1>My Work Position</h1>
+            <div class="header-search">
+                <input type="text" id="search-input" placeholder="Search for jobs...">
+                <button id="search-button">Search</button>
+            </div>
+            <nav>
+                <a href="#" id="signin-btn" class="nav-button">Sign In</a>
+                <a href="#" id="register-btn" class="nav-button">Register</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main content with job listings -->
+    <main>
+        <section class="job-listings" id="job-listings">
+            <h2>Available Jobs</h2>
+            <div id="job-cards-container" class="job-cards-container"></div>
+            <div class="pagination">
+                <button id="prev-page">Previous</button>
+                <span id="page-info"></span>
+                <button id="next-page">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Apply Now Modal -->
+    <div id="apply-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('apply-modal')">&times;</span>
+            <h2>Apply for Job</h2>
+            <form id="apply-form">
+                <label for="applicant-name">Name:</label>
+                <input type="text" id="applicant-name" required>
+                
+                <label for="applicant-email">Email:</label>
+                <input type="email" id="applicant-email" required>
+                
+                <label for="applicant-resume">Resume (URL):</label>
+                <input type="url" id="applicant-resume" required>
+                
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signin-modal')">&times;</span>
+            <h2>Sign In</h2>
+            <form id="signin-form">
+                <label for="signin-email">Email:</label>
+                <input type="email" id="signin-email" required>
+                
+                <label for="signin-password">Password:</label>
+                <input type="password" id="signin-password" required>
+                
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" required>
+                
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Job Search</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="minijob.js"></script>
+</body>
+</html>
